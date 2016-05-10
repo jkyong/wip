@@ -3,9 +3,12 @@
        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
-	<definition name="modal/*/*" template="/WEB-INF/jsp/{1}/{2}_modal.jsp">
-	
+	<definition name="modal/*/*" template="/WEB-INF/jsp/{1}/{2}_modal.jsp">	
 	</definition>
+
+	<definition name="grid/*/*" template="/WEB-INF/jsp/{1}/{2}_grid.jsp">	
+	</definition>
+
 
 	<definition name="common" template="/WEB-INF/layout/base.jsp">
 		<put-attribute name="header" value="/WEB-INF/layout/header.jsp" />

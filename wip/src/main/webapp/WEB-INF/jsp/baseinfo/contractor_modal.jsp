@@ -4,6 +4,8 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
+	$("#tel1").select2();
+	
 	$("#add_action_btn").on("click", function() {
 		var type = $("#add_action_btn").data("type");
 
@@ -68,8 +70,6 @@ $(document).ready(function() {
 											<input id="name" name="name" type="text" class="form-control data-field" placeholder="발전 사업자명">
 										</div>
 									</div>
-								</div>
-								<div class="col-md-6">
 									<div class="form-group">
 										<label>전화번호</label> 
 										<div class="row">
@@ -104,8 +104,6 @@ $(document).ready(function() {
 											</div>											
 										</div>
 									</div>
-								</div>
-								<div class="col-md-6">
 									<div class="form-group">
 										<label>우편번호</label>
 										<div class="row mb-15">
@@ -128,10 +126,7 @@ $(document).ready(function() {
 									<div class="form-group"> 
 										<label>비고</label>
 										<input id="description" name="description" type="text" class="form-control data-field" placeholder="비고">												
-									</div>
-								</div>
-								
-								<div class="col-md-6">												
+									</div>											
 									<div class="form-group">
 										<label>Email</label>
 										<div class="input-group">
@@ -139,8 +134,6 @@ $(document).ready(function() {
 											<input id="email" name="email" type="text" class="form-control data-field" placeholder="Email">
 										</div>
 									</div>
-								</div>
-								<div class="col-md-6">
 									<div class="form-group"> 
 										<label>담당자</label>
 										<div class="input-group">

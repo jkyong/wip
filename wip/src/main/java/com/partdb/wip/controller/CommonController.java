@@ -33,5 +33,12 @@ public class CommonController {
 			@PathVariable("group") String group, 
 			@PathVariable("page") String page) {
 		return "modal" + "/" + group + "/" + page;
-	}		
+	}
+	
+	@RequestMapping(value = "/grid/{group}/{page}", method = RequestMethod.GET)
+	public String grid(
+			@PathVariable("group") String group, 
+			@PathVariable("page") String page) {
+		return "grid" + "/" + group + "/" + page;
+	}	
 }
