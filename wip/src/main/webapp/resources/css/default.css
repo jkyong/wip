@@ -1,0 +1,43 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+body {
+	/* font-family: 'Nanum Gothic', sans-serif; */
+	margin-right: auto;
+  	margin-left: auto;
+  	max-width: 1600px; /* or 950px */
+}
+.text-size-8px {
+	font-size: 8px;	
+}
+
+label.control-label {
+	/* padding-left:0px; */
+}
+
+
+.panel .panel-body {
+    max-height: 640px;
+    overflow-y: auto;
+}
+
+
+/* jqGrid */
+.ui-jqgrid .ui-jqgrid-htable th { height: 33px; }
+
+.ui-jqgrid tr.jqgrow td { height: 28px; padding: 5px 2px 1px 2px; }
+.ui-jqgrid .ui-jqgrid-view table { font-size: 12px; cursor: pointer; }
+
+/*
+.ui-state-highlight, 
+.ui-widget-content .ui-state-highlight, 
+ .ui-widget-header .ui-state-highlight { border: 1px solid #eeeeee; background: #81C784; color: #555555; } */
+
+
+.ui-jqgrid .ui-jqgrid-toppager .ui-pager-control, .ui-jqgrid .ui-jqgrid-pager .ui-pager-control { height: 32px; }
+
+.ui-jqgrid .ui-pg-input, .ui-jqgrid .ui-jqgrid-toppager .ui-pg-input { height: 22px; font-size: 13px; border: 1px solid #ccc; padding: 1px 2px; }
+
+.ui-jqgrid .ui-pg-table td { padding: 1px 4px; }
+
+.ui-jqgrid .ui-jqgrid-pager { font-size: 13px; }
+
+.ui-jqgrid .ui-pg-selbox, .ui-jqgrid .ui-jqgrid-toppager .ui-pg-selbox { height: 26px; border: 1px solid #ccc; padding: 4px 6px; margin-top: 1px; }
