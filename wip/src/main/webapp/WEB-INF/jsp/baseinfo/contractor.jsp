@@ -62,7 +62,7 @@ var Modal = function(title, div_id, type) {
 	this.type = type;
 };
 
-Modal.prototype.open = function() {
+Modal.prototype.open = function() { 
 	switch( this.type ) {
 	case "save":
 		$("#add_action_btn").html("추가").data("type", "save");
@@ -87,7 +87,7 @@ Modal.prototype.setData = function(curDataSet) {
 Modal.prototype.clearFields = function() {
 	$(".data-field").each(function() {
 		$(this).val("");
-		$("#tel1").select2("val", "");
+		$("#tel1").select2("val", ""); 
 	});
 };
 

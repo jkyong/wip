@@ -9,6 +9,8 @@
 	<definition name="grid/*/*" template="/WEB-INF/jsp/{1}/{2}_grid.jsp">	
 	</definition>
 
+	<definition name="form/*/*" template="/WEB-INF/jsp/{1}/{2}_form.jsp">	
+	</definition>
 
 	<definition name="common" template="/WEB-INF/layout/base.jsp">
 		<put-attribute name="header" value="/WEB-INF/layout/header.jsp" />

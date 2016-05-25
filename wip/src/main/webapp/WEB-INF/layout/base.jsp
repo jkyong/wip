@@ -47,6 +47,7 @@
 	
 	<script type="text/javascript" src="${pageContext.request.contextPath }/resources/assets/js/core/app.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath }/resources/assets/js/pages/form_layouts.js"></script>
+	
 	<%-- <script type="text/javascript" src="${pageContext.request.contextPath }/resources/assets/js/pages/form_bootstrap_select.js"></script> --%>
 	<%-- <script type="text/javascript" src="${pageContext.request.contextPath }/resources/assets/js/pages/datatables_data_sources.js"></script> --%>
 	
@@ -59,7 +60,10 @@
 	<!-- jqGrid -->
 	<script src="${pageContext.request.contextPath }/resources/js/jqGrid/i18n/grid.locale-kr.js" type="text/javascript" ></script>
 	<script src="${pageContext.request.contextPath }/resources/js/jqGrid/jquery.jqGrid.min.js" type="text/javascript" ></script>
-		
+	
+	<!-- underscore -->	
+	<script type="text/javascript" src="${pageContext.request.contextPath }/resources/js/underscore/underscore.js"></script>
+	
 	<link href="${pageContext.request.contextPath }/resources/css/default.css" rel="stylesheet" type="text/css">
 	
 </head>

@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 	
+<script src="${pageContext.request.contextPath }/resources/js/K_Modal.js" type="text/javascript" ></script>
+	
 <!-- Page header -->
 <div class="page-header">
 	<div class="page-header-content">
@@ -19,12 +21,10 @@
 
 <!-- Page container -->
 <div class="page-container">
-
 	<!-- Page content -->
 	<div class="page-content"> 
 		<!-- Main content -->
 		<div class="content-wrapper">
-
 			<!-- Ajax sourced data -->
 			<div class="panel panel-flat border-grey">
 				<div class="panel-heading">
@@ -47,8 +47,7 @@
 					<div class="text-right">
 						<button type="button" id="add_btn" class="btn bg-primary" >추가</button>
 						<button type="button" id="del_btn" class="btn bg-primary">삭제</button>		
-					</div>
-					
+					</div>					
 				</div>
 			</div>
 		</div>
@@ -58,75 +57,18 @@
 </div>
 <!-- /page container -->
 
-<div id="add_form_modal" class="modal fade">
-<!-- modal -->
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="modal-header bg-info-600">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h5 class="modal-title">블레이드 추가</h5>
-			</div>
-			
-			<div class="modal-body">
-				<div class="panel panel-flat">												
-					<div class="panel-body">
-						<form class="form-group" action="#">	
-							<input type="hidden" id="id" name="id" class="data-field">
-							<div class="row">
-								<div class="col-md-6">												
-									<div class="form-group">
-										<label>블레이드명</label>
-										<div class="input-group">
-											<span class="input-group-addon"><i class="icon-user"></i></span>
-											<input id="name" name="name" type="text" class="form-control data-field" placeholder="블레이드명">
-										</div>
-									</div>
-		
-									<div class="form-group"> 
-										<label>타입</label>
-										<input id="type" name="type" type="text" class="form-control data-field" placeholder="타입">												
-									</div>
-									
-									<div class="form-group"> 
-										<label>비고</label>
-										<input id="description" name="description" type="text" class="form-control data-field" placeholder="비고">												
-									</div>
-								</div>
-								
-								<div class="col-md-6">
-									<div class="form-group"> 
-										<label>제작사</label>
-										<input id="manufacturer" name="manufacturer" type="text" class="form-control data-field" placeholder="제작사">												
-									</div>
-			
-									<div class="form-group"> 
-										<label>규격</label>
-										<input id="standard" name="standard" type="text" class="form-control data-field" placeholder="규격">												
-									</div>															
-								</div>		
-							</div>
-						</form>
-					</div>
-				</div>
-				<!-- modal body -->
-				<div class="modal-footer">
-					<button type="button" id="add_modal_btn" class="btn btn-link" data-dismiss="modal">닫기</button>
-					<button type="submit" id="add_action_btn" class="btn btn-primary"></button>
-				</div>
-			</div>
-			<!-- modal content -->
-		</div>						
-		<!-- modal dialog -->
-	</div>
-	<!-- /input group addons -->
-</div>
+<script type="text/javascript">
+
+
+</script>
+
+
 
 <script type="text/javascript">
 $(document).ready(function() {
+	
 	$("#add_action_btn").on("click", function() {
 		var type = $("#add_action_btn").data("type");
-		
-		console.log(JSON.stringify($("form").serializeArray()));
 		
 		switch (type) {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 		case "save":			
@@ -191,8 +133,36 @@ $(document).ready(function() {
 		    repeatitems:false
 		},
 		ondblClickRow: function(rowId) {
-			Modal.open("add_form_modal", "update");
-			Modal.setData($(this).getRowData(rowId));
+			
+			$("<div>").load("${pageContext.request.contextPath}/form/baseinfo/blade", function() {
+				var randomId = "blade_form_0";
+				
+				$(this).find("#add_form_modal").attr("id", randomId).appendTo(".page-container");
+				
+				var modal;
+				modal = new K_Modal(randomId, "0");
+				modal.init(); 
+				
+				//modal.destroy();
+				
+				$("#testbtn").on("click", function() {
+					console.log("*");
+					$("<div>").load("${pageContext.request.contextPath}/form/baseinfo/blade", function() {
+						var randomId = "blade_form_1";
+						
+						$(this).find("#add_form_modal").attr("id", randomId).appendTo(".page-container");
+						
+						var modal;
+						modal = new K_Modal(randomId, "blade_form_0");
+						modal.init(); 
+						
+						modal.destroy();
+					});
+				});	
+			});
+			
+			//Modal.open("add_form_modal", "update");
+			//Modal.setData($(this).getRowData(rowId));
 		},
 		loadComplete: function(data) {
 			
@@ -314,3 +284,4 @@ function resizeJqGridWidth(grid_id, div_id) {
 	}).trigger('resize');
 }
 </script>
+

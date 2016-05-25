@@ -33,7 +33,7 @@ $(document).ready(function() {
 				success: function(result) {
 					$('#add_form_modal').modal('toggle');
 					$("#list").trigger("reloadGrid");
-				}, 
+				},  
 				error: function(a) {
 					alert(a.status);
 				}

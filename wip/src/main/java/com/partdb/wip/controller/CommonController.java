@@ -40,5 +40,12 @@ public class CommonController {
 			@PathVariable("group") String group, 
 			@PathVariable("page") String page) {
 		return "grid" + "/" + group + "/" + page;
+	}
+	
+	@RequestMapping(value = "/form/{group}/{page}", method = RequestMethod.GET)
+	public String form(
+			@PathVariable("group") String group, 
+			@PathVariable("page") String page) {
+		return "form" + "/" + group + "/" + page;
 	}	
 }
